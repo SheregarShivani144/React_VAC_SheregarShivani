@@ -1,0 +1,203 @@
+.todo-app {
+  position: relative;
+  max-width: 920px;
+  margin: 3rem auto 4rem;
+  padding: 2.3rem 2.2rem 2.6rem;
+  border-radius: 34px;
+  background: rgba(14, 16, 28, 0.88);
+  border: 1px solid rgba(124, 109, 250, 0.15);
+  box-shadow: 0 30px 90px rgba(3, 9, 24, 0.4);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.todo-app::before,
+.todo-app::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.75;
+}
+
+.todo-app::before {
+  width: 220px;
+  height: 220px;
+  top: -60px;
+  left: -40px;
+  background: rgba(124, 109, 250, 0.22);
+}
+
+.todo-app::after {
+  width: 280px;
+  height: 280px;
+  bottom: -90px;
+  right: -70px;
+  background: rgba(255, 120, 180, 0.14);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  color: #f6f7ff;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+  text-shadow: 0 12px 40px rgba(124, 109, 250, 0.22);
+}
+
+.todo-input-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+
+.todo-input-group .form-control {
+  min-height: 62px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f2f4ff;
+  font-size: 1rem;
+  box-shadow: inset 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.todo-input-group .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.todo-input-group .form-control:focus {
+  outline: none;
+  border-color: rgba(124, 109, 250, 0.85);
+  box-shadow: 0 0 0 6px rgba(124, 109, 250, 0.12);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.todo-add-btn {
+  border-radius: 20px;
+  min-width: 120px;
+  align-self: stretch;
+  padding: 0 1.25rem;
+  background: linear-gradient(135deg, #7c6dfa 0%, #a99cf7 100%) !important;
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 18px 46px rgba(124, 109, 250, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.todo-add-btn:hover,
+.todo-add-btn:focus {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 24px 62px rgba(124, 109, 250, 0.3);
+  filter: brightness(1.05);
+}
+
+.todo-list {
+  margin-top: 1rem;
+}
+
+.todo-empty-state {
+  padding: 1.8rem 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 22px;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.99rem;
+  text-align: center;
+}
+
+.todo-item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.3rem;
+  margin-bottom: 0.85rem;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(124, 109, 250, 0.32) !important;
+}
+
+.todo-item-text {
+  flex: 1 1 auto;
+  text-align: left;
+  color: #f7f8ff;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.todo-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.todo-action-btn {
+  padding: 0.62rem 1rem;
+  min-width: 85px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+}
+
+.todo-action-btn:hover,
+.todo-action-btn:focus {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.todo-delete-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.todo-delete-btn:hover {
+  background: rgba(255, 120, 180, 0.18) !important;
+}
+
+.todo-edit-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.todo-edit-btn:hover {
+  background: rgba(124, 109, 250, 0.18) !important;
+}
+
+.list-group {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .todo-app {
+    margin: 1.5rem 1rem 2rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .todo-input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .todo-add-btn {
+    min-width: unset;
+  }
+}

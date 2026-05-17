@@ -1,0 +1,44 @@
+:root {
+  color: #e7e9ff;
+  background: #090a11;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(156, 192, 255, 0.35), transparent 25%),
+    linear-gradient(180deg, #e8f0ff 0%, #d8e6fb 40%, #c7d9f4 100%);
+  color: #1b2351;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(124, 109, 250, 0.25);
+  outline-offset: 2px;
+}
