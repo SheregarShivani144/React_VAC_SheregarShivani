@@ -1,0 +1,34 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.app__navbar-logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #030303;
+  letter-spacing: 0.05em;
+}
+
+.app__navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.app__navbar ul a {
+  text-transform: capitalize;
+  color: #313bac;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app__navbar li div {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: transparent;
+}
